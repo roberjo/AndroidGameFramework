@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.example.framework.Screen;
 import com.example.framework.implementation.AndroidGame;
+import com.example.samplegame.R;
 
 public class SampleGame extends AndroidGame {
 	public static String map;
@@ -21,7 +22,7 @@ public class SampleGame extends AndroidGame {
 			firstTimeCreate = false;
 		}
 		
-		InputStream is = getResources().openRawResources(R.raw.map1);
+		InputStream is = getResources().openRawResource(R.raw.map1);
 		map = convertStreamToString(is);
 		return new SplashLoadingScreen(this);
 	}
